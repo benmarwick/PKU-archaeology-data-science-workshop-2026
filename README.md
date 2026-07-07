@@ -37,7 +37,7 @@ If you are not able to install software on a device, click on this button to wri
 
 ## Dataset
 
-`lithics_raw.csv` contains 300 simulated artefacts (100 per period) with 10 variables. Variable distributions and inter-period patterns are based on published literature on Palaeolithic lithic technology, including raw material provisioning strategies (Bourguignon et al. 2008), platform preparation and preparatory scarring (Shimelmitz et al. 2014), and the flake-to-blade technological trajectory (Bar-Yosef & Kuhn 1999).
+`lithics_raw.csv` contains 300 simulated artefacts (100 per period) with 10 variables. Variable distributions and inter-period patterns are based on published literature on Palaeolithic lithic technology, including raw material provisioning strategies, platform preparation and preparatory scarring (Shimelmitz et al. 2014), and the flake-to-blade technological trajectory (Bar-Yosef & Kuhn 1999).
 
 | Variable | Description |
 |----------|-------------|
@@ -101,7 +101,6 @@ PDFs for student readings are in the `readings/` directory.
 
 - Ambrose, S. H. (2001). Paleolithic technology and human evolution. *Science*, 291(5509), 1748-1753. https://doi.org/10.1126/science.1059487
 - Bar-Yosef, O., & Kuhn, S. L. (1999). The Big Deal about Blades: Laminar Technologies and Human Evolution. *American Anthropologist*, 101(2), 322-338. https://doi.org/10.1525/aa.1999.101.2.322
-- Bourguignon, L., Faivre, J.-P., & Turq, A. (2008). Levallois procédé, un concept clé du Paléolithique moyen? In: N. Condemi & G.-C. Weniger (Eds.), *Continuity and Discontinuity in the Peopling of Europe* (pp. 69-78). Springer.
 - Çetinkaya-Rundel, M., & Hardin, J. (2023). *Introduction to Modern Statistics* (2nd ed.). OpenIntro. https://openintro-ims.netlify.app/
 - Ismay, C., & Kim, A. Y. (2023). *Statistical Inference via Data Science: A ModernDive into R and the Tidyverse* (2nd ed.). CRC Press. https://moderndive.com/
 - Marwick, B., d'Alpoim Guedes, J., Barton, C. M., et al. (2017). Open science in archaeology. *SAA Archaeological Record*, 17(5), 8-14.
