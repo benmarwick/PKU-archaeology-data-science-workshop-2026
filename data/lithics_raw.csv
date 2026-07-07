@@ -1,0 +1,301 @@
+artefact_id,period,raw_material,platform_prep,length_mm,width_mm,thickness_mm,platform_mm,weight_g,giur
+ART-0001,Lower,Quartzite,Faceted,44mm,25.8,9.5,8.8,5.74 g,0.159
+ART-0002,Lower,Quartzite,Plain,43.7mm,36.2,14.2,12.3,12.39 g,0.332
+ART-0003,Lower,Fine chert,Abraded,49.5mm,48.8,9.7,12.1,14.64 g,0.226
+ART-0004,Lower,  Basic chert  ,Plain,54.6mm,31.7,13.9,8.5,12.17 g,0.285
+ART-0005,Lower,Quartzite,Plain,21.8mm,19.4,5.9,5.6,1.33 g,0.306
+ART-0006,Lower,Quartzite,Plain,37.2mm,27.7,8.2,8.7,4.9 g,0.203
+ART-0007,Lower,Quartzite,Plain,64mm,64.6,16.8,13.2,37.4 g,0.275
+ART-0008,Lower,Quartzite,Plain,61.6mm,39.7,15,12.5,19.04 g,0.251
+ART-0009,Lower,Quartzite,Faceted,59.5mm,50,15.5,9.5,29.58 g,0.141
+ART-0010,Lower,Basic chert,Abraded,67mm,49,17,13.3,26.63 g,0.21
+ART-0011,Lower,Quartzite,Faceted,52.9mm,56.6,15.4,9.9,23.86 g,0.32
+ART-0012,Lower,  Basic chert  ,Faceted,40mm,35.1,14.5,8.6,10.08 g,0.487
+ART-0013,Lower,BASIC CHERT,Plain,36.7mm,25,15.9,6.8,9.02 g,0.274
+ART-0014,Lower,Quartzite,Plain,30.5mm,31.4,6.9,9.7,4.21 g,0.19
+ART-0015,Lower,Quartzite,Plain,46.5mm,35.1,15.9,6.2,13.22 g,0.418
+ART-0016,Lower,Basic chert,Faceted,51.4mm,50.7,13.8,9.9,20.4 g,0.014
+ART-0017,Lower,Quartzite,Plain,40.6mm,37.5,12.6,7.6,12.59 g,0.54
+ART-0018,Lower,Fine chert,Plain,40.6mm,29.8,9.3,7.7,6.28 g,0.377
+ART-0019,Lower,FINE CHERT,Plain,42.8mm,25.1,13,8.1,7.28 g,0.209
+ART-0020,Lower,Quartzite,Plain,52.5mm,47.8,20.8,7.2,36.04 g,0.276
+ART-0021,Lower,Basic chert,Plain,59.3mm,36.6,15.2,11.5,19.91 g,0.249
+ART-0022,Lower,  Quartzite  ,Faceted,34.6mm,34.9,10.8,8.8,7.75 g,0.282
+ART-0023,Lower,Basic chert,Plain,46.6mm,38.8,16.8,9.2,19.61 g,0.221
+ART-0024,Lower,Quartzite,Plain,44.6mm,37.3,13.9,9.5,13.17 g,0.195
+ART-0025,Lower,Quartzite,Plain,44.1mm,31.4,11.1,8.8,9.69 g,0.31
+ART-0026,Lower,  Basic chert  ,Plain,60.9mm,43,13,10,16.46 g,0.382
+ART-0027,Lower,Basic chert,Plain,48.3mm,32.4,11.5,9.4,9.34 g,0.266
+ART-0028,Lower,BASIC CHERT,Plain,55.2mm,34.3,-999,7.9,13.56 g,0.334
+ART-0029,Lower,Fine chert,Abraded,49.8mm,34.5,8.8,6.4,7.24 g,0.248
+ART-0030,Lower,Quartzite,Plain,42.5mm,40,15.2,8.9,15.31 g,0.415
+ART-0031,Lower,Quartzite,Faceted,39.4mm,36,-999,7.3,6.27 g,0.327
+ART-0032,Lower,Quartzite,Faceted,71.9mm,59.4,21.3,11.5,49.69 g,0.299
+ART-0033,Lower,Quartzite,Plain,36mm,28.8,10.3,10.3,6.05 g,0.261
+ART-0034,Lower,BASIC CHERT,Plain,65.8mm,55.3,16,10.3,38.29 g,0.347
+ART-0035,Lower,Quartzite,Plain,61.9mm,54.7,13.6,9.3,28.78 g,0.308
+ART-0036,Lower,Quartzite,Plain,48.5mm,47.7,13,10.3,20.19 g,0.367
+ART-0037,Lower,  Quartzite  ,Plain,53.4mm,42.2,12.8,6.3,14.41 g,0.399
+ART-0038,Lower,QUARTZITE,Plain,47.9mm,41.9,13.1,9.4,12.93 g,0.529
+ART-0039,Lower,Quartzite,Plain,33.6mm,36.5,9.4,7.7,6.06 g,0.217
+ART-0040,Lower,Fine chert,Plain,53.2mm,43.2,18.8,8.8,26.14 g,0.145
+ART-0041,Lower,Quartzite,Abraded,45.1mm,24,14,8.2,8.12 g,0.094
+ART-0042,Lower,BASIC CHERT,Plain,83.3mm,64.7,22.3,15.6,64.49 g,0.259
+ART-0043,Lower,Quartzite,Plain,41.2mm,32.5,13.1,10.5,12.22 g,0.189
+ART-0044,Lower,Basic  chert,Plain,29.4mm,29.3,13.3,8.8,5.91 g,0.282
+ART-0045,Lower,Quartzite,Abraded,50.6mm,52.7,13.8,8.5,24.01 g,0.199
+ART-0046,Lower,  Quartzite  ,Faceted,75.4mm,56.6,17.6,9.1,42.97 g,0.325
+ART-0047,Lower,  Fine chert  ,Faceted,46.6mm,47.7,17.2,9.2,20.18 g,0.141
+ART-0048,Lower,Quartzite,Faceted,58.8mm,46.3,14,11.1,22.81 g,0.371
+ART-0049,Lower,QUARTZITE,Plain,43.6mm,38.4,12.8,5.6,10.8 g,0.118
+ART-0050,Lower,  Quartzite  ,Plain,55.9mm,30.6,14.4,9.8,17.28 g,0.317
+ART-0051,Lower,Basic chert,Plain,45.8mm,41.4,-8.2,9.7,10.45 g,0.284
+ART-0052,Lower,Quartzite,Plain,60.2mm,43.3,12.8,8.8,20.66 g,0.215
+ART-0053,Lower,Quartzite,Plain,62.4mm,49,13.7,10.8,26.72 g,0.158
+ART-0054,Lower,Quartzite,Plain,62.1mm,48.1,12.5,12,18.71 g,0.373
+ART-0055,Lower,Quartzite,Plain,40.1mm,47.2,11.6,6.9,12.42 g,0.276
+ART-0056,Lower,Quartzite,Abraded,64.4mm,38.1,10.8,16.8,14.41 g,0.474
+ART-0057,Lower,Quartzite,Faceted,35.7mm,34.7,8.9,8.7,6.8 g,0.208
+ART-0058,Lower,Quartzite,Plain,44.9mm,29.5,9.3,6.7,8.46 g,0.321
+ART-0059,Lower,Quartzite,Faceted,50.3mm,41,8.3,5.9,9.41 g,0.225
+ART-0060,Lower,  Basic chert  ,Faceted,52mm,34.3,17.6,8.7,16.7 g,0.503
+ART-0061,Lower,Quartzite,Abraded,46.4mm,38,13.5,11.2,11.83 g,0.197
+ART-0062,Lower,Quartzite,Plain,35.3mm,27.6,5.4,N/A,3.06 g,0.344
+ART-0063,Lower,Quartzite,Plain,43.2mm,24.5,-999,8.8,7.53 g,0.19
+ART-0064,Lower,Quartzite,Abraded,45mm,42.2,11,7.5,12.91 g,0.18
+ART-0065,Lower,Basic chert,Plain,43.2mm,37.3,16.1,8.9,13.89 g,0.172
+ART-0066,Lower,Basic chert,Plain,41.6mm,41.2,9.5,8.6,10.21 g,0.244
+ART-0067,Lower,  Fine chert  ,Faceted,39.9mm,22,8.8,8.7,4.67 g,0.297
+ART-0068,Lower,  Quartzite  ,Plain,38.3mm,32.4,10.6,8.9,8.81 g,0.415
+ART-0069,Lower,Basic chert,Abraded,58.6mm,55.8,21.6,11.6,41.52 g,0.059
+ART-0070,Lower,Basic  chert,Faceted,48.1mm,34.1,11.4,10.8,8.65 g,0.403
+ART-0071,Lower,Quartzite,Plain,55mm,40.8,12.6,10.1,14.83 g,0.339
+ART-0072,Lower,Quartzite,Faceted,420.0mm,43,18.1,12.2,23.57 g,0.136
+ART-0073,Lower,Quartzite,Faceted,57.7mm,42.4,13.9,11.3,20.1 g,0.391
+ART-0074,Lower,Quartzite,Abraded,54mm,37.3,14.5,5.5,17.58 g,0.387
+ART-0075,Lower,Quartzite,Plain,48.1mm,38.6,15.8,12.5,15.95 g,0.323
+ART-0076,Lower,Quartzite,Plain,33.3mm,28.5,9.8,8.8,5.12 g,0.308
+ART-0077,Lower,Basic chert,Plain,32.4mm,22.6,8.6,7.7,3.79 g,0.178
+ART-0078,Lower,Quartzite,Faceted,52.7mm,47.5,15.5,10,19.57 g,0.397
+ART-0079,Lower,Quartzite,Faceted,26.1mm,35.1,15.2,6.2,9.33 g,0.297
+ART-0080,Lower,Quartzite,Plain,37.9mm,21.5,10.8,8.6,4.66 g,0.405
+ART-0081,Lower,Quartzite,Plain,54.8mm,31.9,17.4,10.8,17.15 g,0.261
+ART-0082,Lower,Basic chert,Plain,55.7mm,34.8,11.2,10,12.68 g,0.206
+ART-0083,Lower,Quartzite,Plain,57.4mm,39.9,12.6,8.7,18.24 g,0.147
+ART-0084,Lower,Quartzite,Plain,38mm,25.6,15.5,7.6,10 g,0.239
+ART-0085,Lower,Fine chert,Plain,63.6mm,38.1,17.3,6.9,26.41 g,0.099
+ART-0086,Lower,Quartzite,Faceted,26mm,20.2,15,5.4,5.22 g,0.197
+ART-0087,Lower,Quartzite,Faceted,40.7mm,39.3,16.8,10.4,17.73 g,0.276
+ART-0088,Lower,Basic  chert,Faceted,44mm,39.7,14.4,11.3,12.78 g,0.454
+ART-0089,Lower,Quartzite,Faceted,52.2mm,46,15.8,12,20.9 g,0.227
+ART-0090,Lower,Basic chert,Plain,63.2mm,47.6,16.5,11.8,23.51 g,0.362
+ART-0091,Lower,Fine chert,Faceted,30.1mm,27.4,4.9,6.8,2.7 g,0.266
+ART-0092,Lower,Quartzite,Plain,26.5mm,31.9,11.2,7.8,5.57 g,0.293
+ART-0093,Lower,Quartzite,Faceted,43.7mm,36.6,13.4,11.4,11.41 g,0.279
+ART-0094,Lower,BASIC CHERT,Abraded,34.3mm,24.2,11.4,9.1,4.41 g,0.135
+ART-0095,Lower,Basic chert,Faceted,55.4mm,43.1,14.5,5.9,19.06 g,0.219
+ART-0096,Lower,Basic chert,Plain,47.8mm,39.8,15.1,7.6,13.51 g,0.205
+ART-0097,Lower,Quartzite,Plain,67.7mm,40.4,16.6,13.3,24.24 g,0.357
+ART-0098,Lower,Quartzite,Plain,23.8mm,43.9,9.4,8.7,6 g,0.401
+ART-0099,Lower,Quartzite,Abraded,27.3mm,28.4,8.4,7.7,4.37 g,0.13
+ART-0100,Lower,Quartzite,Faceted,49.7mm,25.2,20.4,8.5,13.17 g,0.276
+ART-0101,Middle,Basic chert,Faceted,56.9mm,33.6,10.8,8.1,11.86 g,0.569
+ART-0102,Middle,Obsidian,Faceted,36.3mm,24.1,8.3,8.6,3.25 g,0.585
+ART-0103,Middle,Basic chert,Faceted,47.5mm,29.5,10.3,8.2,9.16 g,0.524
+ART-0104,Middle,Basic chert,Abraded,46.5mm,27.8,9,7.4,5.45 g,0.408
+ART-0105,Middle,Basic chert,Plain,37.5mm,24.7,7.7,7.8,4.55 g,0.421
+ART-0106,Middle,Quartzite,Faceted,44.2mm,32.1,11,8.5,7.93 g,0.548
+ART-0107,Middle,  Basic chert  ,Faceted,42.5mm,28.2,12.5,8,7.1 g,0.471
+ART-0108,Middle,Quartzite,Faceted,18.4mm,13.8,5,4.1,0.69 g,0.443
+ART-0109,Middle,Quartzite,Abraded,56mm,34.5,12.3,9,11.89 g,0.52
+ART-0110,Middle,Basic chert,Abraded,60.1mm,37.4,10.5,9.3,13.38 g,0.449
+ART-0111,Middle,Quartzite,Abraded,57.1mm,31.4,-999,5,11.68 g,0.298
+ART-0112,Middle,Fine chert,Plain,66.7mm,33.7,12,11.8,13.84 g,0.447
+ART-0113,Middle,Basic  chert,Faceted,49.2mm,30.1,6.9,7.8,5.64 g,0.457
+ART-0114,Middle,Basic chert,Plain,52.1mm,33.2,12.5,7.7,13.84 g,0.433
+ART-0115,Middle,Quartzite,Plain,61.4mm,38.7,11.1,8.9,18.21 g,0.529
+ART-0116,Middle,Fine chert,Plain,77.6mm,49.7,15.4,8.5,34.15 g,0.599
+ART-0117,Middle,Fine chert,Faceted,48mm,37.2,9.8,8.4,10.31 g,0.458
+ART-0118,Middle,Basic chert,Abraded,49.6mm,25,7.7,9.7,5.19 g,0.585
+ART-0119,Middle,Quartzite,Plain,68.4mm,43.8,13.1,9.8,25.18 g,0.553
+ART-0120,Middle,Fine chert,Faceted,47.6mm,22.1,11,6.9,5.98 g,0.521
+ART-0121,Middle,Obsidian,Faceted,61.6mm,45,11.6,9.5,13.97 g,0.412
+ART-0122,Middle,Basic chert,Abraded,38.6mm,23.5,7.6,N/A,3.37 g,0.217
+ART-0123,Middle,Fine chert,Abraded,36.4mm,19.7,8.8,7.8,3.01 g,0.614
+ART-0124,Middle,Fine chert,Plain,60.5mm,34.1,9,8.4,10.23 g,0.406
+ART-0125,Middle,FINE CHERT,Faceted,37.9mm,27.1,11.8,7,6.19 g,0.415
+ART-0126,Middle,Quartzite,Faceted,47.4mm,25.7,10.3,8.6,6.79 g,0.492
+ART-0127,Middle,  Fine chert  ,Faceted,36.4mm,28.5,9,5.4,5.23 g,0.588
+ART-0128,Middle,Basic chert,Faceted,39.7mm,28.8,8.4,7.3,4.7 g,0.53
+ART-0129,Middle,  Fine chert  ,Plain,39mm,19.8,9.2,5,3.43 g,0.662
+ART-0130,Middle,QUARTZITE,Faceted,41.8mm,25.3,5.9,6,3.95 g,0.516
+ART-0131,Middle,Quartzite,Faceted,48mm,23,8.1,6.7,5.72 g,0.48
+ART-0132,Middle,Quartzite,Faceted,60.6mm,35.6,10.1,9.9,14.45 g,0.394
+ART-0133,Middle,Quartzite,Faceted,53.6mm,20.5,11.6,7.6,8.63 g,0.49
+ART-0134,Middle,  Fine chert  ,Faceted,31.9mm,27.8,10,6.9,4.5 g,0.374
+ART-0135,Middle,Basic chert,Faceted,27.3mm,22.9,8,6.9,2.37 g,45
+ART-0136,Middle,QUARTZITE,Abraded,47.3mm,24.9,10,8.8,7.5 g,0.361
+ART-0137,Middle,Quartzite,Plain,49.5mm,32.7,9.5,6.7,9.5 g,0.419
+ART-0138,Middle,  Basic chert  ,Abraded,39.4mm,24.6,9.2,6.2,5.88 g,0.495
+ART-0139,Middle,  Basic chert  ,Faceted,57mm,27.3,13.1,9.7,11.6 g,0.492
+ART-0140,Middle,Basic chert,Plain,40.8mm,22.4,8.6,6.1,3.69 g,0.409
+ART-0141,Middle,Quartzite,Abraded,35.4mm,19.6,6.3,4.5,2.57 g,0.469
+ART-0142,Middle,Fine chert,Faceted,59.4mm,30.8,7.5,6.8,7.59 g,0.38
+ART-0143,Middle,Fine chert,Faceted,54.4mm,26.8,4.5,6.5,3.9 g,0.507
+ART-0144,Middle,Fine chert,Plain,50.5mm,34.2,11.2,10,10.51 g,0.482
+ART-0145,Middle,Fine chert,Faceted,40.7mm,21.9,7.7,6.8,4.56 g,0.348
+ART-0146,Middle,Fine chert,Plain,38.7mm,28.3,10.1,7.7,6.14 g,0.569
+ART-0147,Middle,Quartzite,Faceted,50.1mm,25.4,9.4,9.5,8.37 g,0.275
+ART-0148,Middle,Quartzite,Faceted,39.9mm,25.6,7.3,6.2,5.06 g,0.411
+ART-0149,Middle,BASIC  CHERT,Faceted,53.9mm,41,11.5,9.8,14.37 g,0.475
+ART-0150,Middle,Basic chert,Faceted,50.2mm,31.2,11.8,7.9,11.91 g,0.516
+ART-0151,Middle,Quartzite,Faceted,48.5mm,28,14.5,7.9,13.7 g,0.382
+ART-0152,Middle,Quartzite,Plain,63.1mm,29.1,10.8,9.9,10.6 g,0.256
+ART-0153,Middle,Quartzite,Faceted,48.5mm,36.3,11,8.4,10.74 g,0.58
+ART-0154,Middle,  Basic chert  ,Plain,45.3mm,26.1,8.2,7,5.17 g,0.5
+ART-0155,Middle,Quartzite,Faceted,36.4mm,18.6,9.8,6.4,4 g,0.427
+ART-0156,Middle,Basic chert,Faceted,30.1mm,21,9.2,4,3.45 g,0.329
+ART-0157,Middle,Obsidian,Faceted,49.9mm,32.7,11.5,9.5,11.62 g,0.458
+ART-0158,Middle,Fine chert,Faceted,32.6mm,25.3,8.4,8,4.1 g,0.573
+ART-0159,Middle,Fine chert,Faceted,33.5mm,24.1,11.1,6.1,4.52 g,0.565
+ART-0160,Middle,  Basic chert  ,Faceted,57.3mm,27.4,7.9,8.5,7.2 g,0.503
+ART-0161,Middle,QUARTZITE,Faceted,37.9mm,24.6,6.4,5.3,3.63 g,0.423
+ART-0162,Middle,Basic chert,Abraded,38.2mm,26.6,8.1,7.6,850 g,0.26
+ART-0163,Middle,OBSIDIAN,Faceted,56.8mm,29.5,7.9,9,5.86 g,0.571
+ART-0164,Middle,Basic chert,Faceted,41.3mm,25.9,8.8,3.6,5.8 g,0.318
+ART-0165,Middle,Fine chert,Faceted,70.4mm,46.1,12.5,11.9,25.29 g,0.711
+ART-0166,Middle,Basic chert,Faceted,32.8mm,28.5,7.6,8.4,3.63 g,0.543
+ART-0167,Middle,Quartzite,Faceted,43.7mm,32,7.7,10,6.21 g,0.573
+ART-0168,Middle,Basic chert,Abraded,68.7mm,41.9,9.4,10.4,14.06 g,0.438
+ART-0169,Middle,Fine chert,Faceted,34.2mm,26.4,7.7,6.5,3.95 g,0.381
+ART-0170,Middle,FINE CHERT,Plain,43.9mm,28.7,10,8.7,7.43 g,0.345
+ART-0171,Middle,Basic chert,Faceted,41.6mm,27.9,5.5,10.5,3.23 g,0.441
+ART-0172,Middle,Quartzite,Abraded,42.4mm,21.7,9,5.9,4.94 g,0.627
+ART-0173,Middle,Basic chert,Faceted,35.3mm,16.1,5.7,4.9,1.62 g,0.454
+ART-0174,Middle,Basic chert,Abraded,50.7mm,37.3,6.1,5.5,6.23 g,0.55
+ART-0175,Middle,Fine chert,Faceted,52.4mm,23.6,9.5,7.1,6.82 g,0.462
+ART-0176,Middle,Obsidian,Faceted,33.8mm,27.1,10.1,5.9,5.5 g,0.423
+ART-0177,Middle,Fine chert,Abraded,50.3mm,22.8,7.2,7.5,5.21 g,0.525
+ART-0178,Middle,Basic chert,Faceted,63.3mm,29.5,8.9,7.7,8.19 g,0.397
+ART-0179,Middle,Basic chert,Plain,46.1mm,30.2,9.7,7.7,7.01 g,0.492
+ART-0180,Middle,QUARTZITE,Faceted,47.5mm,28,7.8,6.3,5.23 g,0.626
+ART-0181,Middle,Quartzite,Plain,58.2mm,32,8.5,10.4,8.64 g,0.523
+ART-0182,Middle,Obsidian,Faceted,49.6mm,29.6,8.8,7.8,7.79 g,0.494
+ART-0183,Middle,Basic chert,Faceted,38.6mm,22.7,8,10.5,3.93 g,0.497
+ART-0184,Middle,Obsidian,Faceted,51.2mm,27.3,12.7,8.8,10.64 g,0.573
+ART-0185,Middle,Basic chert,Faceted,60.3mm,37.2,9.1,9.6,9.66 g,0.315
+ART-0186,Middle,Quartzite,Abraded,45.4mm,22.6,10.3,6.5,5.17 g,0.388
+ART-0187,Middle,Fine chert,Abraded,37.6mm,23.2,7.2,5.1,4.16 g,0.495
+ART-0188,Middle,Fine chert,Faceted,36.8mm,20.2,10.1,4,3.72 g,0.503
+ART-0189,Middle,Fine chert,Faceted,44.6mm,15.3,7.7,10.2,2.74 g,0.367
+ART-0190,Middle,Basic chert,Faceted,60.8mm,37.1,13.7,9.4,17.55 g,0.338
+ART-0191,Middle,QUARTZITE,Plain,50.6mm,30.2,5.7,5.5,5.26 g,0.502
+ART-0192,Middle,Basic chert,Plain,42.4mm,34.3,8.7,8.7,6.4 g,0.339
+ART-0193,Middle,  Fine chert  ,Faceted,73mm,36.7,13.5,10.1,20.56 g,0.494
+ART-0194,Middle,Basic  chert,Faceted,62.4mm,36,9.3,10.1,10.4 g,0.41
+ART-0195,Middle,Fine chert,Faceted,38.9mm,24.1,6.4,7.1,3.55 g,0.647
+ART-0196,Middle,Fine chert,Abraded,50.3mm,29.3,12.1,9.9,11.99 g,0.444
+ART-0197,Middle,Basic chert,Faceted,50.1mm,36.9,11.7,8.5,13.93 g,0.441
+ART-0198,Middle,  Quartzite  ,Plain,50.3mm,31.4,12.7,7,11.11 g,0.475
+ART-0199,Middle,Basic chert,Faceted,66.7mm,36.6,14.3,10.7,19.22 g,0.4
+ART-0200,Middle,BASIC CHERT,Faceted,58.5mm,32.8,8.3,10.2,10.52 g,0.566
+ART-0201,Upper,FINE CHERT,Abraded,64.1mm,22.6,9,7.3,7.57 g,0.268
+ART-0202,Upper,Obsidian,Abraded,58.2mm,22.5,7.3,6.1,5.06 g,0.342
+ART-0203,Upper,Fine chert,Faceted,51.5mm,20.8,6.9,6.5,3.97 g,0.413
+ART-0204,Upper,Quartzite,Plain,54.1mm,22.6,7.9,7,5.03 g,0.341
+ART-0205,Upper,Fine chert,Abraded,50.7mm,23.1,7.6,5.9,4.92 g,0.377
+ART-0206,Upper,Obsidian,Abraded,51.7mm,18.7,5.4,5.6,2.33 g,0.262
+ART-0207,Upper,BASIC CHERT,Abraded,59.8mm,22.1,8.2,7.6,6.6 g,0.278
+ART-0208,Upper,Fine  chert,Plain,53mm,21.3,6.5,5.9,4.46 g,0.477
+ART-0209,Upper,Basic chert,Abraded,69.4mm,25.7,7.8,8.3,6.8 g,0.347
+ART-0210,Upper,Basic chert,Abraded,54.1mm,20.9,5.3,5.7,3.63 g,0.222
+ART-0211,Upper,Fine chert,Abraded,46.1mm,16.6,6.5,5.5,2.44 g,0.434
+ART-0212,Upper,Fine chert,Abraded,63.1mm,22.6,7.1,7.7,5.24 g,0.377
+ART-0213,Upper,Fine chert,Faceted,54.9mm,16.7,6.3,4.4,2.93 g,0.472
+ART-0214,Upper,  Basic chert  ,Faceted,56.6mm,20.9,7.4,6.5,5.04 g,0.32
+ART-0215,Upper,Fine chert,Faceted,40.2mm,13.6,5.8,4.3,1.63 g,0.23
+ART-0216,Upper,Fine chert,Faceted,58mm,20.9,6.3,6.6,4.53 g,0.454
+ART-0217,Upper,Obsidian,Abraded,48.9mm,20.2,8.6,4.7,4.45 g,0.33
+ART-0218,Upper,Fine chert,Faceted,57.3mm,19.8,8,4.9,5.26 g,0.385
+ART-0219,Upper,  Basic chert  ,Faceted,52.3mm,18,7.3,6.3,4.24 g,0.387
+ART-0220,Upper,Fine chert,Abraded,68.1mm,26.7,9,7.1,10.91 g,0.397
+ART-0221,Upper,  Fine chert  ,Abraded,57.5mm,21,8.2,5.9,6.49 g,0.46
+ART-0222,Upper,Fine chert,Abraded,74.2mm,27.6,9.2,7.2,9.14 g,0.468
+ART-0223,Upper,Basic chert,Faceted,58mm,26.7,7.2,7.4,5.19 g,0.492
+ART-0224,Upper,  Quartzite  ,Abraded,59.1mm,24.7,6.2,6.1,6.13 g,0.451
+ART-0225,Upper,Fine  chert,Abraded,37.1mm,16.3,5.7,4.3,2.13 g,0.31
+ART-0226,Upper,Fine chert,Abraded,70.7mm,26.6,7.8,7,7.36 g,0.23
+ART-0227,Upper,  Fine chert  ,Abraded,45.2mm,17.8,6.5,6.1,2.52 g,0.397
+ART-0228,Upper,Fine chert,Abraded,59.2mm,21.7,7,N/A,4.94 g,0.432
+ART-0229,Upper,Obsidian,Faceted,63.6mm,22.7,7.3,6.6,6.28 g,0.264
+ART-0230,Upper,Fine  chert,Abraded,68.1mm,27.1,10.9,7,12.42 g,0.43
+ART-0231,Upper,Obsidian,Abraded,44.3mm,20.8,5.7,4.5,2.94 g,0.354
+ART-0232,Upper,Fine chert,Faceted,71.8mm,27.6,7,8,8.61 g,0.443
+ART-0233,Upper,Fine chert,Abraded,59.2mm,24.1,7.4,6.6,5.66 g,0.191
+ART-0234,Upper,  Quartzite  ,Abraded,43.7mm,15,6.6,4.7,2.71 g,0.363
+ART-0235,Upper,Basic chert,Abraded,54.6mm,19.5,7.1,5.8,3.91 g,0.356
+ART-0236,Upper,Fine chert,Abraded,52.3mm,16.6,7.7,6.5,4.23 g,0.186
+ART-0237,Upper,  Fine chert  ,Abraded,58.8mm,23.9,8.2,5.6,5.65 g,0.195
+ART-0238,Upper,Fine chert,Abraded,44.3mm,19.8,6,6.4,3.31 g,0.361
+ART-0239,Upper,Fine chert,Faceted,54.9mm,18.3,6.8,4.9,4.27 g,0.32
+ART-0240,Upper,Fine chert,Abraded,64.7mm,24.3,8.3,6,7.42 g,0.254
+ART-0241,Upper,Obsidian,Faceted,52.7mm,22.3,5.8,5.7,3 g,0.494
+ART-0242,Upper,Obsidian,Faceted,54.7mm,19.9,7.1,5.9,3.43 g,0.222
+ART-0243,Upper,  Fine chert  ,Abraded,69.7mm,20.8,6.5,5.9,6.26 g,0.396
+ART-0244,Upper,  Fine chert  ,Abraded,61.9mm,26.9,7.2,6.8,7.82 g,0.324
+ART-0245,Upper,  Obsidian  ,Abraded,72.4mm,25.7,7.6,6.1,6.28 g,0.3
+ART-0246,Upper,  Fine chert  ,Faceted,37.4mm,16.6,5.9,3.6,2.38 g,0.294
+ART-0247,Upper,Basic chert,Faceted,64mm,25.7,7.7,5.6,7.3 g,0.529
+ART-0248,Upper,Fine chert,Faceted,41.4mm,12.3,4.1,5.2,1.1 g,0.48
+ART-0249,Upper,Fine chert,Abraded,67.3mm,24.6,8.4,6.5,8.66 g,0.314
+ART-0250,Upper,  Fine chert  ,Plain,43.2mm,18.9,5.4,5.6,2.65 g,0.517
+ART-0251,Upper,  Fine chert  ,Abraded,53.9mm,17.1,6.5,6.6,2.87 g,0.369
+ART-0252,Upper,OBSIDIAN,Abraded,50.4mm,15.1,5.5,4.3,1.84 g,0.385
+ART-0253,Upper,Basic chert,Abraded,68.9mm,20.3,7.9,N/A,5.42 g,0.288
+ART-0254,Upper,Basic chert,Abraded,63.8mm,25.9,8.2,7,7.53 g,0.121
+ART-0255,Upper,FINE CHERT,Plain,48.2mm,20.8,6.8,8.3,3.81 g,0.249
+ART-0256,Upper,FINE CHERT,Abraded,50.6mm,21.6,6.9,6.9,4.47 g,0.347
+ART-0257,Upper,Basic chert,Abraded,54.2mm,22.7,6.4,6.6,4.87 g,0.419
+ART-0258,Upper,Fine chert,Abraded,58.6mm,23.3,7.3,7,5.24 g,0.302
+ART-0259,Upper,Fine chert,Plain,48.9mm,17.5,8.3,4.5,4.47 g,0.456
+ART-0260,Upper,QUARTZITE,Faceted,66.4mm,21,7.7,6.6,6.04 g,0.206
+ART-0261,Upper,  Fine chert  ,Faceted,61.5mm,23.4,7.1,6.6,5.08 g,0.436
+ART-0262,Upper,FINE CHERT,Abraded,43.6mm,16.9,8.5,6.7,3 g,0.138
+ART-0263,Upper,OBSIDIAN,Abraded,48.3mm,18.3,5.6,5.7,2.92 g,0.279
+ART-0264,Upper,Fine chert,Abraded,61.5mm,22.8,7.1,6.4,5.27 g,0.425
+ART-0265,Upper,Obsidian,Faceted,48.9mm,16.8,6.3,6.6,3.01 g,0.277
+ART-0266,Upper,  Obsidian  ,Abraded,45.5mm,19.8,8.2,5.4,3.32 g,0.394
+ART-0267,Upper,Obsidian,Abraded,59.7mm,21.9,9,7.2,5.21 g,0.337
+ART-0268,Upper,Fine chert,Plain,52.2mm,16.2,6.1,4.5,3.08 g,0.509
+ART-0269,Upper,Quartzite,Abraded,55.8mm,20.9,8.1,5.8,4.88 g,0.383
+ART-0270,Upper,FINE CHERT,Faceted,47.8mm,17.3,5.5,5.9,2.32 g,0.428
+ART-0271,Upper,Fine chert,Plain,46.7mm,18.8,6,5.3,2.84 g,0.367
+ART-0272,Upper,Fine chert,Abraded,52.6mm,26.2,7.4,6.6,5.75 g,0.338
+ART-0273,Upper,Fine chert,Abraded,56.6mm,20.5,6.7,5.4,3.79 g,0.075
+ART-0274,Upper,  Fine chert  ,Abraded,54.9mm,21.9,6.4,5.2,4.55 g,0.509
+ART-0275,Upper,Quartzite,Plain,39.2mm,20.7,7,5.6,3.83 g,0.377
+ART-0276,Upper,QUARTZITE,Abraded,44.8mm,18.1,6.5,7.2,2.86 g,0.357
+ART-0277,Upper,OBSIDIAN,Faceted,59.3mm,22.4,7.7,8.3,5.21 g,0.257
+ART-0278,Upper,Fine  chert,Faceted,48.4mm,18.6,5.1,5.9,2.47 g,0.347
+ART-0279,Upper,Fine chert,Abraded,42.2mm,20.3,7.6,6.2,3.76 g,0.414
+ART-0280,Upper,Fine chert,Abraded,68.4mm,24.8,7.2,7.4,7.62 g,0.296
+ART-0281,Upper,Basic chert,Abraded,53.1mm,19.3,6.6,6.5,3.96 g,0.195
+ART-0282,Upper,Fine chert,Abraded,55.8mm,18.2,7.4,6.4,4.54 g,0.334
+ART-0283,Upper,Fine chert,Abraded,45.5mm,20.1,6.1,6.3,3.59 g,0.282
+ART-0284,Upper,  Fine chert  ,Plain,63.1mm,22.2,7.6,6,6.82 g,0.234
+ART-0285,Upper,Quartzite,Abraded,47mm,19.8,6.3,6.4,3.1 g,0.295
+ART-0286,Upper,Fine chert,Plain,49mm,15,6.8,5.4,2.58 g,0.281
+ART-0287,Upper,Fine chert,Abraded,44.6mm,17.5,7,5.7,3.6 g,0.412
+ART-0288,Upper,Basic chert,Plain,39.4mm,17.5,5.5,5.4,2.38 g,0.379
+ART-0289,Upper,  Fine chert  ,Plain,44.7mm,18,6.8,5.5,2.7 g,0.341
+ART-0290,Upper,Basic chert,Abraded,60.7mm,24.1,8.1,6.7,5.78 g,0.303
+ART-0291,Upper,  Quartzite  ,Faceted,51.8mm,16.4,6.7,5.2,3.21 g,0.297
+ART-0292,Upper,Fine chert,Abraded,62.7mm,23.7,7.3,7.5,5.64 g,0.254
+ART-0293,Upper,Fine chert,Abraded,49.1mm,18.9,7.1,5.1,3.34 g,0.346
+ART-0294,Upper,Quartzite,Abraded,46.8mm,19.9,8,5.9,4.68 g,0.383
+ART-0295,Upper,  Obsidian  ,Abraded,66.1mm,21.8,8.5,7,7.18 g,0.237
+ART-0296,Upper,Fine chert,Faceted,47.7mm,18.1,6.1,4.8,3.39 g,0.397
+ART-0297,Upper,Obsidian,Abraded,48.1mm,23.8,7.3,6.2,5.08 g,0.286
+ART-0298,Upper,Quartzite,Abraded,47.3mm,16.3,5.9,5.1,3.06 g,0.285
+ART-0299,Upper,FINE CHERT,Faceted,50mm,21.4,6.6,5.5,4.18 g,0.376
+ART-0300,Upper,Fine chert,Abraded,43.9mm,17.3,6.9,5.9,3.17 g,0.492
