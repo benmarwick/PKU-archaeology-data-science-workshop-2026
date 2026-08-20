@@ -12,7 +12,7 @@ lesson_files <- sort(lesson_files)
 # exclude this script itself and placeholder files with no real code
 lesson_files <- setdiff(lesson_files, c(
   "code/extract_lesson_code.R",
-  "code/04-2_lesson.R"
+  "code/03-3_lesson.R"
 ))
 
 # continuation operators: a line ending with one of these (optionally followed

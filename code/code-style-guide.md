@@ -1,4 +1,4 @@
-Aways prefer tidyverse packages and functions
+Always prefer tidyverse packages and functions
 
 ggplot() and aes() are not nested but always connected by +
 
@@ -43,7 +43,7 @@ Format: **Opening** recalls the previous lesson (retrieval practice). **Closing*
 
 ---
 
-### Lesson 02-1
+### Lesson 01-3
 
 **Opening — recall 01-2**
 > "After `read_csv('lithics_raw.csv')`, which function shows column names, their types, and a preview of the first values — all in one output?"
@@ -56,9 +56,9 @@ Format: **Opening** recalls the previous lesson (retrieval practice). **Closing*
 
 ---
 
-### Lesson 02-2
+### Lesson 02-1
 
-**Opening — recall 02-1**
+**Opening — recall 01-3**
 > "We saw `length_mm` imported as `<chr>`. Which `parse_*` function extracts the number from `'42.3mm'` and discards the units?"
 > a) `parse_double()` &nbsp; b) `parse_character()` &nbsp; c) `parse_number()` &nbsp; d) `as.numeric()`
 > **Answer: c) `parse_number()`**
@@ -72,10 +72,10 @@ Format: **Opening** recalls the previous lesson (retrieval practice). **Closing*
 
 ---
 
-### Lesson 03-1
+### Lesson 02-2
 
-**Opening — recall 02-2**
-> "We ended 02-2 by saving our clean tibble to disk. Which function did we use, and what file did it produce?"
+**Opening — recall 02-1**
+> "We ended 02-1 by saving our clean tibble to disk. Which function did we use, and what file did it produce?"
 > a) `save()` → `.RData` &nbsp; b) `write_csv()` → `lithics_clean.csv` &nbsp; c) `export()` → `.xlsx` &nbsp; d) `write.csv()` → `lithics_clean.csv`
 > **Answer: b) `write_csv()` → `lithics_clean.csv`**
 
@@ -85,9 +85,9 @@ Format: **Opening** recalls the previous lesson (retrieval practice). **Closing*
 
 ---
 
-### Lesson 03-2
+### Lesson 03-1
 
-**Opening — recall 03-1**
+**Opening — recall 02-2**
 > "The boxplot from Lesson 1 showed elongation medians in what order from lowest to highest?"
 > a) Upper < Middle < Lower &nbsp; b) Lower < Middle < Upper &nbsp; c) All equal &nbsp; d) Middle > Lower > Upper
 > **Answer: b) Lower < Middle < Upper**
@@ -99,9 +99,9 @@ Format: **Opening** recalls the previous lesson (retrieval practice). **Closing*
 
 ---
 
-### Lesson 04-1
+### Lesson 03-2
 
-**Opening — recall 03-2**
+**Opening — recall 03-1**
 > "ANOVA found that elongation differed by period (p < 0.05). What did Tukey HSD add that ANOVA alone could not tell us?"
 > a) The overall F-statistic &nbsp; b) Which specific pairs of periods differ from each other &nbsp; c) Whether the data are normally distributed &nbsp; d) The effect size
 > **Answer: b)**
@@ -113,9 +113,9 @@ Format: **Opening** recalls the previous lesson (retrieval practice). **Closing*
 
 ---
 
-### Lesson 04-2
+### Lesson 03-3
 
-**Opening — recall 04-1**
+**Opening — recall 03-2**
 > "We set `scale.unit = TRUE` in `PCA()`. Why is this essential when our variables include both `length_mm` (range ~15–80) and `weight_g` (range ~1–50)?"
 > a) It makes the biplot prettier &nbsp; b) It removes missing values &nbsp; c) It prevents variables with larger numeric ranges from dominating the components &nbsp; d) It converts weights to millimetres
 > **Answer: c)**
@@ -158,7 +158,7 @@ Format: **Opening** recalls the previous lesson (retrieval practice). **Closing*
 
 ---
 
-### Lesson 02-1
+### Lesson 01-3
 
 **Question: In a Quarto document, what is a code chunk?**
 
@@ -171,7 +171,7 @@ Format: **Opening** recalls the previous lesson (retrieval practice). **Closing*
 
 ---
 
-### Lesson 02-2
+### Lesson 02-1
 
 **Question: You see raw material names like "Chert" and "chert" in your data. They look the same but are not equal. What function fixes this?**
 
@@ -184,7 +184,7 @@ Format: **Opening** recalls the previous lesson (retrieval practice). **Closing*
 
 ---
 
-### Lesson 03-1
+### Lesson 02-2
 
 **Question: In ggplot2, what do the `x =` and `y =` inside `aes()` do?**
 
@@ -197,7 +197,7 @@ Format: **Opening** recalls the previous lesson (retrieval practice). **Closing*
 
 ---
 
-### Lesson 03-2
+### Lesson 03-1
 
 **Question: After you run an ANOVA test, why do you run Tukey HSD?**
 

@@ -17,16 +17,16 @@ If you are not able to install software on a device, click on this button to wri
 
 ## Workshop Schedule
 
-| Lesson | Topic | Reading |
-|--------|-------|---------|
-| 01-1 | Orientation to R and RStudio | Wickham et al. (2023), Ch. 1 |
-| 01-2 | Objects, functions, importing data | Ambrose (2001) |
-| 02-1 | Quarto documents | Wickham et al. (2023), Ch. 28 |
-| 02-2 | Data cleaning | Wickham et al. (2023), Ch. 3 |
-| 03-1 | Visualisation with ggplot2 | Wickham et al. (2023), Ch. 9 |
-| 03-2 | Statistical inference (chi-square, ANOVA, Tukey) | Çetinkaya-Rundel & Hardin (2023), Chs. 18, 22; Ismay & Kim (2023), Ch. 9 |
-| 04-1 | Multivariate methods (PCA) | Vanderwarker & Marcoux (2018) |
-| 04-2 | Capstone activity and quiz | Marwick et al. (2017) |
+| Session | Lesson | Topic | Reading |
+|--------|--------|-------|---------|
+| Thursday afternoon | 01-1 | Orientation to R and RStudio | Wickham et al. (2023), Ch. 1 |
+| Thursday afternoon | 01-2 | Objects, functions, importing data | Ambrose (2001) |
+| Thursday afternoon | 01-3 | Quarto documents | Wickham et al. (2023), Ch. 28 |
+| Thursday evening | 02-1 | Data cleaning | Wickham et al. (2023), Ch. 3 |
+| Thursday evening | 02-2 | Visualisation with ggplot2 | Wickham et al. (2023), Ch. 9 |
+| Friday morning | 03-1 | Statistical inference (chi-square, ANOVA, Tukey) | Çetinkaya-Rundel & Hardin (2023), Chs. 18, 22; Ismay & Kim (2023), Ch. 9 |
+| Friday morning | 03-2 | Multivariate methods (PCA) | Vanderwarker & Marcoux (2018) |
+| Friday morning | 03-3 | Capstone activity and quiz | Marwick et al. (2017) |
 
 ## Design Principles
 
@@ -52,17 +52,17 @@ If you are not able to install software on a device, click on this button to wri
 ## Repository Structure
 
 ```
-SCU-UIP-2026/
+PKU-archaeology-data-science-workshop-2026/
 ├── code/
 │   ├── 00_simulate_lithics.R        # Instructor-only: generates the dataset
-│   ├── 01-1_lesson.R                # L1: orientation (no code)
-│   ├── 01-2_lesson.R                # L2: importing data (no code)
-│   ├── 02-1_lesson.R                # L1: Quarto (no code)
-│   ├── 02-2_lesson.R                # L2: data cleaning
-│   ├── 03-1_lesson.R                # L1: visualisation
-│   ├── 03-2_lesson.R                # L2: statistical inference
-│   ├── 04-1_lesson.R                # L1: PCA
-│   ├── 04-2_lesson.R                # L2: capstone
+│   ├── 01-1_lesson.R                # Orientation to R and RStudio (no code)
+│   ├── 01-2_lesson.R                # Objects, functions, importing data (no code)
+│   ├── 01-3_lesson.R                # Quarto documents (no code)
+│   ├── 02-1_lesson.R                # Data cleaning
+│   ├── 02-2_lesson.R                # Visualisation with ggplot2
+│   ├── 03-1_lesson.R                # Statistical inference (chi-square, ANOVA, Tukey)
+│   ├── 03-2_lesson.R                # Multivariate methods (PCA)
+│   ├── 03-3_lesson.R                # Capstone activity and quiz (no code)
 │   ├── extract_lesson_code.R        # Builds the live demo script
 │   └── live-demo-script.R           # Combined R code from all lessons
 ├── data/

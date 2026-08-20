@@ -91,7 +91,7 @@ raw_material <- map2(
 # =============================================================================
 # SECTION 3: PLATFORM PREPARATION
 # =============================================================================
-# WHY: this is the headline chi-square variable for 03-2. The association
+# WHY: this is the headline chi-square variable for 03-1. The association
 #      with period is strong, directional, and mirrors a REAL significant
 #      result reported in the literature (see citation below), so the test
 #      result students get is not a simulation artefact - it replicates an
@@ -134,7 +134,7 @@ platform_prep <- map2(
 # SECTION 4: MORPHOMETRICS (length, width, thickness, platform area)
 # =============================================================================
 # WHY: these four correlated variables feed BOTH the elongation ratio
-#      (Section 5, the ANOVA/Tukey variable) AND the PCA (04-1). Generating
+#      (Section 5, the ANOVA/Tukey variable) AND the PCA (03-2). Generating
 #      them as correlated multivariate normal data, rather than independently,
 #      is essential - real flakes have correlated dimensions (bigger flakes
 #      are wider AND thicker), and PCA only finds something interesting to
@@ -181,7 +181,7 @@ colnames(morpho) <- c("length_mm", "width_mm", "thickness_mm", "platform_mm")
 # =============================================================================
 # SECTION 5: ELONGATION (derived ratio - the headline ANOVA/Tukey variable)
 # =============================================================================
-# WHY: elongation = length / width. This is the variable used for 03-2's
+# WHY: elongation = length / width. This is the variable used for 03-1's
 #      ANOVA and Tukey HSD. Because the underlying length/width means were
 #      set deliberately (Section 4), this produces a clean three-step
 #      staircase: Lower < Middle < Upper, with ALL THREE pairwise Tukey
@@ -242,7 +242,7 @@ giur <- map_dbl(as.character(period), \(p) {
 # WHY: deriving weight from length*width*thickness*density rather than
 #      simulating it independently keeps the dataset physically coherent -
 #      bigger flakes really do weigh more, and material density differences
-#      are real. This matters for the 03-1 scatterplot lesson, which should
+#      are real. This matters for the 02-2 scatterplot lesson, which should
 #      show a believable, physically-grounded relationship, not noise.
 
 density_lookup <- c(Quartzite = 2.7, `Basic chert` = 2.55,
@@ -282,7 +282,7 @@ lithics_clean <- tibble(
 # =============================================================================
 # WHY: real archaeological recording sheets are never this clean. Spoiling
 #      the data deliberately - and in a CONTROLLED, REVERSIBLE way - lets
-#      02-2 teach genuine data cleaning verbs on a dataset
+#      02-1 teach genuine data cleaning verbs on a dataset
 #      students will then use for real inference later. Every
 #      problem introduced here maps to an actual, common field-recording
 #      error type, not an arbitrary obstacle.

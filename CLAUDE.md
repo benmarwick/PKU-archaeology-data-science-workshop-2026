@@ -61,7 +61,7 @@ Instructions for AI agents working on this project.
 
 ## Project Structure
 
-- Lesson R files live in `code/` with pattern `DD-D_day_lesson.R`
+- Lesson R files live in `code/`
 - Slides live in `slides/` as `.pptx` files
 - Student data: `lithics_raw.csv` (spoiled), `lithics_clean.csv` (instructor verification)
 - Instructor-only script: `code/00_simulate_lithics.R`

@@ -1,5 +1,5 @@
 
-# LESSON: 02-2 (Data Cleaning)
+# LESSON: 02-1 (Data Cleaning)
 
 library(tidyverse)
 
@@ -42,7 +42,7 @@ glimpse(lithics_clean)
 write_csv(lithics_clean, "data/lithics_clean.csv")
 
 
-# LESSON: 03-1 (Visualisation)
+# LESSON: 02-2 (Visualisation)
 
 library(tidyverse)
 
@@ -100,7 +100,7 @@ ggplot(lithics) + # more elaborate scatterplot
   theme_minimal()  # consider to show facet_wrap to improve 
 
 
-# LESSON: 03-2 (Statistical Inference)
+# LESSON: 03-1 (Statistical Inference)
 
 library(ggcorrplot)
 library(broom)
@@ -139,7 +139,7 @@ fit |>
   theme_minimal()
 
 
-# LESSON: 04-1 (Multivariate methods: composition + PCA)
+# LESSON: 03-2 (Multivariate methods: composition + PCA)
 
 library(tidyverse)
 library(FactoMineR)

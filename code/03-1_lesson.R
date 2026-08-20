@@ -1,127 +1,115 @@
 # =============================================================================
-# LESSON: 03-1 (Visualisation)
+# LESSON: 03-1 (Statistical Inference)
 # =============================================================================
 # LEARNING OBJECTIVES:
-#   1. Build histograms, boxplots, and scatterplots with ggplot2
-#   2. Apply brewer/viridis colour palettes correctly (never hardcoded colours)
-#   3. See the Lower->Middle->Upper elongation trend directly, before any
-#      formal statistical test is run - visualisation comes first, inference
-#      second, which mirrors good archaeological practice generally
+#   1. Use geom_count() correctly for an EDA check before a formal test
+#   2. Run and interpret a chi-square test of independence, then diagnose
+#      WHICH cells drive the association using standardized residuals
+#      visualised with ggcorrplot
+#   3. Run ANOVA + Tukey HSD, then visualise the pairwise comparisons as a
+#      tidy forest plot using broom::tidy() + geom_pointrange()
 # =============================================================================
 
-library(tidyverse)
+library(ggcorrplot)
+library(broom)
 
-lithics <- read_csv("data/lithics_clean.csv") |>
-  mutate( # factor conversions control plot ordering. Without them, ggplot sorts alphabetically
-    period = factor(period, 
-                    levels = c("Lower", "Middle", "Upper")),
-    raw_material  = factor(raw_material,
-                    levels = c("Quartzite", "Basic Chert", "Fine Chert", "Obsidian")),
-    platform_prep = factor(platform_prep, 
-                           levels = c("Plain", "Faceted", "Abraded")))
+# --- Chi-square test: platform_prep x period ---------------------------------
+# WHY: tests whether platform preparation strategy and period are
+#      INDEPENDENT. A small p-value means knowing the period genuinely
+#      changes your best guess at platform type - i.e. platform preparation
+#      strategy is not random with respect to time period.
+# ARCHAEOLOGICAL PRECEDENT: this mirrors a REAL significant finding -
+#      Shimelmitz et al. (2014, PLOS ONE) report chi^2 = 24.14, df = 1,
+#      p < 0.0001 for platform type vs preparatory scarring in Yabrudian
+#      assemblages. The test below is the same KIND of result, not a
+#      simulation artefact invented for this workshop.
+chi_sq_test <- chisq.test(table(lithics$period, lithics$platform_prep))
+chi_sq_test # report chi-square statistic, df, and p-value here. 
 
-# --- Histogram: elongation distribution by period ---------------------------
-# WHY: a histogram shows DISTRIBUTION SHAPE, not just a single mean - this
-#      matters here because we expect not just a shift in the centre of the
-#      distribution across periods, but also a narrowing (lower variance) in
-#      later periods, consistent with increasing standardisation of blade
-#      production relative to earlier flake technologies.
+# A p-value below 0.05 (expected: well below it, by design) means we reject
+# the null hypothesis that platform_prep is independent of period.
 
-ggplot(lithics) +  # start with basic histogram that we develop
-  aes(x = elongation) + 
-  geom_histogram() 
+# WHY STANDARDIZED, NOT RAW, RESIDUALS: chisq.test()$residuals returns
+#      PEARSON residuals, which are not directly comparable across cells
+#      with different expected counts. chisq.test()$stdres returns
+#      STANDARDIZED residuals, which ARE comparable across cells and can be
+#      read against the familiar +-1.96 / +-2.58 thresholds (roughly
+#      p < 0.05 / p < 0.01 for that individual cell). For a teaching context
+#      where students will visually compare circle sizes/colours across
+#      cells, standardized residuals are the statistically correct choice -
+#      using raw Pearson residuals here would risk teaching students to
+#      misread cell-level importance.
+ggcorrplot(chi_sq_test$stdres, # Diagnosing WHICH cells drive the association
+           method = "circle") +
+  scale_fill_distiller(
+    palette = "RdBu",
+    name = "Std. residual"
+  )
 
-ggplot(lithics) + # develop the basic plot into more elaborate one
-  aes(x = elongation, 
-      fill = period) + 
-  geom_histogram() +
-  scale_fill_brewer(palette = "Dark2") +
-  labs(x = "Elongation (length / width)", y = "Count", fill = "Period") +
-  theme_minimal() # consider to show facet_wrap to improve
+# INTERPRETATION: cells with large positive standardized residuals
+# (strongly red or blue depending on direction, per the diverging palette)
+# are observed MORE often than chance in that period/platform combination;
+# large negative residuals mean LESS often than chance. Expect Lower/Plain
+# and Middle/Faceted and Upper/Abraded to show the largest positive
+# residuals - these are the specific cells driving the overall significant
+# chi-square result, which is archaeologically the most useful information
+# the test provides: not just "they differ" but "here is exactly how."
 
-# INTERPRETATION: Upper Palaeolithic elongation values cluster in a
-# narrower, higher range than Lower Palaeolithic values, which spread more
-# widely around a lower centre. This is the FIRST visual hint of the
-# flake -> Levallois -> blade technological trajectory, before any p-value
-# has been computed. Bar-Yosef & Kuhn (1999) frame blade production as the
-# defining laminar technology of this later trajectory.
+# --- ANOVA: does elongation differ by period? --------------------------------
+# WHY: ANOVA tests whether AT LEAST ONE period's mean elongation differs
+#      from the others. It does NOT tell us WHICH periods differ from which
+#      - that is what Tukey HSD (next step) is for. Running ANOVA first and
+#      Tukey second mirrors the correct statistical workflow: omnibus test,
+#      then post-hoc.
+fit <- aov(elongation ~ period, data = lithics)
+tidy(fit) # report F statistic, df, and p-value here. 
 
-# --- Barplot: elongation by period --- Raw material composition across periods
-# =============================================================================
-# WHY A STACKED BAR PLOT: this is fundamentally a COMPOSITIONAL question -
-#      not "how many artefacts of each material exist" (which would be
-#      sensitive to our arbitrary sample size choices) but "what PROPORTION
-#      of each period's assemblage is made of each material." Converting
-#      counts to within-period proportions BEFORE plotting is what makes
-#      this a fair compositional comparison across periods of equal sample
-#      size here, and would remain fair even if period sample sizes differed
-#      in a real dataset.
-# ARCHAEOLOGICAL BASIS: this is NOT a simple "more trade over time" story.
-#      Lower Palaeolithic = bulk local material (low diversity). Middle
-#      Palaeolithic = the MOST diverse/even mix of local and semi-local
-#      materials (Bourguignon et al. on La Combette provisioning). Upper
-#      Palaeolithic = one quality material dominant PLUS a much larger
-#      persistent exotic component than earlier periods (long-distance,
-#      quality-driven procurement). The pattern is bulk-local ->
-#      diversified-local -> quality-and-exotic, not a linear increase in
-#      "trade."
+# INTERPRETATION: a small p-value for the period term means elongation is
+# NOT the same across all three periods - but on its own this result cannot
+# tell us whether Lower differs from Middle, Middle from Upper, or only
+# Lower from Upper. That ambiguity is exactly why Tukey HSD is necessary,
+# not merely procedural.
 
-ggplot(lithics) + # basic barplot to setup for hypothesis test in next lesson
-  aes(x = period,  
-      fill = platform_prep)  +
-  geom_bar()
-
-ggplot(lithics) + # develop the basic barplot into a more polished plot
-  aes(x = period,  
-      fill = raw_material) +
-  geom_bar() +
-  scale_fill_viridis_d(option = "D") +
-  labs(x = "Period", y = "Count", fill = "Raw material")
-
-# INTERPRETATION: Lower Palaeolithic shows one colour band (Quartzite)
-# dominating most of the bar. Middle Palaeolithic shows the most EVEN split
-# across three-to-four colour bands - the most compositionally diverse
-# period. Upper Palaeolithic shows one band (Fine Chert) dominant again,
-# but with a visible, persistent Obsidian band that barely existed in
-# earlier periods - this is the "exotic component" the literature
-# documents, not simply "more of everything."
-
-# --- Boxplot: elongation by period -------------------------------------------
-# WHY: boxplots make the period-to-period SHIFT IN MEDIAN easier to compare
-#      at a glance than a histogram does, at the cost of hiding some
-#      distributional detail the histogram showed. Showing both is
-#      deliberate - no single plot type tells the whole story.
-ggplot(lithics) + # basic boxplot, can add ggbeeswarm
-  aes(x = period, 
-      y = elongation) +
-  geom_boxplot() +
+# --- Tukey HSD, visualised as a tidy forest plot -----------------------------
+# WHY THIS VISUALISATION: TukeyHSD()'s default plot() method is functional
+#      but visually crude. Piping through broom::tidy() converts the test
+#      result into a tidy data frame (one row per pairwise comparison),
+#      which can then be visualised with the full ggplot2 toolkit - here, a
+#      forest plot using geom_pointrange() shows each pairwise difference
+#      AND its confidence interval simultaneously, with colour distinguishing
+#      significant from non-significant comparisons at a glance.
+fit |>
+  TukeyHSD() |>
+  tidy() |>
+  ggplot() +
+  aes(x = fct_reorder(contrast, estimate), 
+      y = estimate) +
+  geom_pointrange(aes(ymin = conf.low, 
+                      ymax = conf.high, 
+                      colour = adj.p.value < 0.05)) +
+  geom_hline(yintercept = 0, 
+             linetype = "dashed") +
+  scale_colour_brewer(palette = "Set1") +
+  coord_flip() +
+  labs(x = NULL, 
+       y = "Difference in mean elongation", 
+       colour = "p adj < 0.05") +
   theme_minimal()
 
-# INTERPRETATION: if the three boxes barely overlap, that is a strong visual
-# clue an ANOVA run on this variable will return a small p-value - the
-# formal test in Lesson 2 confirms what the eye already suspects here.
-
-# --- Scatterplot: length vs weight, coloured by raw material ----------------
-# WHY: scatterplots reveal RELATIONSHIPS BETWEEN two continuous variables -
-#      here, confirming that weight increases with length as physically
-#      expected, while colour by raw_material shows whether different
-#      materials occupy different regions of that relationship (e.g.
-#      denser quartzite producing heavier flakes at a given length).
-
-ggplot(lithics) + # basic scatterplot that we develop
-  aes(x = length_mm,
-      y = weight_g) +
-  geom_point() 
-
-ggplot(lithics) + # more elaborate scatterplot
-  aes(x = length_mm,
-      y = weight_g, 
-      colour = raw_material) +
-  geom_point(alpha = 0.6) +
-  scale_colour_brewer(palette = "Set1") +
-  labs(x = "Length (mm)", y = "Weight (g)", colour = "Raw material") +
-  theme_minimal()  # consider to show facet_wrap to improve 
-
-# INTERPRETATION: the positive length-weight relationship is expected and
-# physically necessary (bigger flakes weigh more) 
-
+# INTERPRETATION: by design, ALL THREE pairwise comparisons (Lower-Middle,
+# Middle-Upper, Lower-Upper) should sit clearly away from the dashed zero
+# line and be coloured as significant. This is the ideal teaching case:
+# every pair differs, so the post-hoc test earns its place in the workflow
+# rather than feeling like an unnecessary extra step after an already-
+# significant ANOVA. Archaeologically, this confirms the staircase
+# narrative - flake elongation increases at EVERY transition in the
+# sequence, not just from Lower to Upper while Middle sits ambiguously
+# between the two.
+#
+# CAUTION FOR DISCUSSION: this clean three-step result is a feature of how
+# this teaching dataset was deliberately constructed, not a claim that real
+# Palaeolithic assemblages always show such a tidy staircase. Levallois
+# technology has documented Lower Palaeolithic Acheulian origins, and blade
+# technology appears well before the Upper Palaeolithic in some regions -
+# the real record is messier than this lesson's data. Flag this explicitly
+# with students as the "textbook model vs research reality" discussion.
