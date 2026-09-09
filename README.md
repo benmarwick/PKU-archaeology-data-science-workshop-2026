@@ -1,3 +1,4 @@
+![](poster.jpg)
 
 # Peking University Archaeology Data Science Workshop 2026
 
