@@ -21,8 +21,11 @@ RUN Rscript /tmp/install.R
 # Copy all files from your repo into the home directory
 COPY .  /home/${NB_USER}/
 
-# ---  Configure RStudio to open our project automatically ---
-RUN echo 'setHook("rstudio.sessionInit", function(newSession) { if (newSession && is.null(rstudioapi::getActiveProject())) rstudioapi::openProject("/home/${NB_USER}/PKU-archaeology-data-science-workshop-2026.Rproj") }, action = "append")' > /home/${NB_USER}/.Rprofile
+# --- Automatically open the RStudio project ---
+# Create the switch-to-project file so RStudio Server knows which project to restore at startup
+RUN mkdir -p /home/${NB_USER}/.local/share/rstudio/projects_settings && \
+    echo "/home/${NB_USER}/PKU-archaeology-data-science-workshop-2026.Rproj" > /home/${NB_USER}/.local/share/rstudio/projects_settings/switch-to-project
+
 
 #  permissions so the binder user owns everything
 USER root
