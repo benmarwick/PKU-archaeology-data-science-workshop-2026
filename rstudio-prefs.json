@@ -1,0 +1,56 @@
+{
+    "default_project_location": "~",
+    "jobs_tab_visibility": "shown",
+    "save_workspace": "never",
+    "load_workspace": false,
+    "initial_working_directory": "~",
+    "auto_save_on_blur": true,
+    "posix_terminal_shell": "bash",
+    "always_save_history": false,
+    "rmd_chunk_output_inline": false,
+    "visual_markdown_editing_show_doc_outline": false,
+    "visual_markdown_editing_is_default": false,
+    "visual_markdown_code_editor_line_numbers": true,
+    "insert_native_pipe_operator": true,
+    "show_invisibles": false,
+    "rmd_viewer_type": "pane",
+    "panes": {
+        "quadrants": [
+            "Source",
+            "TabSet1",
+            "Console",
+            "TabSet2"
+        ],
+        "tabSet1": [
+            "Environment",
+            "History",
+            "Connections",
+            "Build",
+            "VCS",
+            "Tutorial",
+            "Presentation"
+        ],
+        "tabSet2": [
+            "Files",
+            "Plots",
+            "Packages",
+            "Help",
+            "Viewer",
+            "Presentations"
+        ],
+        "hiddenTabSet": [],
+        "console_left_on_top": false,
+        "console_right_on_top": true,
+        "additional_source_columns": 0
+    },
+    "latex_preview_on_cursor_idle": "inline_only",
+    "rainbow_parentheses": true,
+    "graphics_backend": "ragg",
+    "soft_wrap_r_files": true,
+    "show_hidden_files": false,
+    "source_with_echo": true,
+    "use_air_formatter": true,
+    "assistant": "none",
+    "chat_provider": "none",
+    "assistant_toolbar_button_visible": false
+}
