@@ -19,12 +19,12 @@ RUN Rscript /tmp/install.R
 
 # ---  Copy our GitHub files into the container ---
 # Copy all files from your repo into the home directory
-COPY .  /home/${NB_USER}/
+COPY .  /home/${NB_USER}/PKU-archaeology-data-science-workshop-2026/
 
 # --- Automatically open the RStudio project ---
 # Create the switch-to-project file so RStudio Server knows which project to restore at startup
 RUN mkdir -p /home/${NB_USER}/.local/share/rstudio/projects_settings && \
-    echo "/home/${NB_USER}/PKU-archaeology-data-science-workshop-2026.Rproj" > /home/${NB_USER}/.local/share/rstudio/projects_settings/switch-to-project
+    echo "/home/${NB_USER}/PKU-archaeology-data-science-workshop-2026/PKU-archaeology-data-science-workshop-2026.Rproj" > /home/${NB_USER}/.local/share/rstudio/projects_settings/switch-to-project
 
 
 #  permissions so the binder user owns everything
