@@ -10,3 +10,6 @@ packages <- c(
 )
 
 install.packages(packages)
+
+remotes::install_github("pmartinezarbizu/pairwiseAdonis/pairwiseAdonis")
+remotes::install_github("alekseyenko/WdStar")
