@@ -12,7 +12,7 @@
     "visual_markdown_editing_is_default": false,
     "visual_markdown_code_editor_line_numbers": true,
     "insert_native_pipe_operator": true,
-    "show_invisibles": false,
+    "show_invisibles": true,
     "rmd_viewer_type": "pane",
     "panes": {
         "quadrants": [
