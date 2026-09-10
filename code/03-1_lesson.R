@@ -12,6 +12,8 @@
 
 library(ggcorrplot)
 library(broom)
+library(car)
+library(FSA) 
 
 # --- Chi-square test: platform_prep x period ---------------------------------
 # WHY: tests whether platform preparation strategy and period are
@@ -19,6 +21,10 @@ library(broom)
 #      changes your best guess at platform type - i.e. platform preparation
 #      strategy is not random with respect to time period.
 chi_sq_test <- chisq.test(table(lithics$period, lithics$platform_prep))
+
+# ASSUMPTION CHECK: Expected counts
+chi_sq_test$expected  # all cells should have expected ≥ 5
+
 chi_sq_test # report chi-square statistic, df, and p-value here. 
 
 # A p-value below 0.05 (expected: well below it, by design) means we reject
@@ -50,44 +56,66 @@ ggcorrplot(chi_sq_test$stdres, # Diagnosing WHICH cells drive the association
 # chi-square result, which is archaeologically the most useful information
 # the test provides: not just "they differ" but "here is exactly how."
 
-# --- ANOVA: does elongation differ by period? --------------------------------
-# WHY: ANOVA tests whether AT LEAST ONE period's mean elongation differs
-#      from the others. It does NOT tell us WHICH periods differ from which
-#      - that is what Tukey HSD (next step) is for. Running ANOVA first and
-#      Tukey second mirrors the correct statistical workflow: omnibus test,
-#      then post-hoc.
-fit <- aov(elongation ~ period, data = lithics)
-tidy(fit) # report F statistic, df, and p-value here. 
+# --- Does elongation differ by period? --------------------------------
 
-# INTERPRETATION: a small p-value for the period term means elongation is
-# NOT the same across all three periods - but on its own this result cannot
-# tell us whether Lower differs from Middle, Middle from Upper, or only
-# Lower from Upper. That ambiguity is exactly why Tukey HSD is necessary,
-# not merely procedural.
+# WHY: Kruskal-Wallis is a non-parametric alternative to ANOVA when
+#      assumptions are violated. It tests whether AT LEAST ONE period's
+#      distribution of elongation differs from the others - not which ones.
+#      Post-hoc Dunn's test identifies specific pairwise differences.
 
-# --- Tukey HSD, visualised as a tidy forest plot -----------------------------
-# WHY THIS VISUALISATION: TukeyHSD()'s default plot() method is functional
-#      but visually crude. Piping through broom::tidy() converts the test
-#      result into a tidy data frame (one row per pairwise comparison),
-#      which can then be visualised with the full ggplot2 toolkit - here, a
-#      forest plot using geom_pointrange() shows each pairwise difference
-#      AND its confidence interval simultaneously, with colour distinguishing
-#      significant from non-significant comparisons at a glance.
-fit |>
-  TukeyHSD() |>
-  tidy() |>
+# ASSUMPTION CHECK: ANOVA assumes equality of variance, normality of residuals
+
+# Homogeneity (Levene's test, robust to non-normality):  Variances are equal across groups? if  p-value > 0.05 then yes, assumptions met
+leveneTest(elongation ~ period, data = lithics, center = median)
+
+# Normality (Shapiro-Wilk on residuals), Residuals are normally distributed? if p-value > 0.05 (e.g., 0.212): Assumptions met - data appears normal
+shapiro.test(residuals(fit))
+
+# If the assumptions are not met, we could:
+# - non-normal residuals: log transform the response:
+# - unequal variances: use robust methods (Kruskall test)
+
+# Kruskal-Wallis test (non-parametric alternative to ANOVA)
+kw_test <- kruskal.test(elongation ~ period, data = lithics)
+tidy(kw_test) # report F statistic, df, and p-value here. 
+
+# INTERPRETATION: a small p-value for the Kruskal-Wallis test means
+# elongation distributions differ across periods. Dunn's test identifies
+# which specific pairwise comparisons are significant.
+
+# --- Dunn's test, visualised as a tidy forest plot ---------------------------
+
+  # WHY THIS VISUALISATION: Dunn's test requires manual tidiest because
+  # dunnTest() returns results in a non-standard format. Tidy conversion
+  # creates a data frame suitable for ggplot2: each row is a pairwise
+  # comparison with Z statistic, p-value, and significance indicator.
+
+# Dunn's test for post-hoc comparisons (equivalent to Tukey HSD)
+dunn_result <- dunnTest(elongation ~ period, data = lithics, method = "bonferroni")
+
+dunn_tidy <- dunn_result$res |>
+  mutate(
+    contrast = Comparison,
+    estimate = Z,  # Use Z statistic as effect size
+    # Approximate 95% CI: Z ± 1.96 (since Z~N(0,1) under null)
+    conf.low = Z - 1.96,
+    conf.high = Z + 1.96,
+    significant = P.adj < 0.05
+  )
+
+dunn_tidy |>
   ggplot() +
   aes(x = fct_reorder(contrast, estimate), 
       y = estimate) +
   geom_pointrange(aes(ymin = conf.low, 
                       ymax = conf.high, 
-                      colour = adj.p.value < 0.05)) +
+                      colour = significant)) +
   geom_hline(yintercept = 0, 
              linetype = "dashed") +
   scale_colour_brewer(palette = "Set1") +
   coord_flip() +
   labs(x = NULL, 
-       y = "Difference in mean elongation", 
+       y = "Z statistic (Dunn's test)", 
        colour = "p adj < 0.05") +
   theme_minimal()
 
@@ -96,7 +124,7 @@ fit |>
 # line and be coloured as significant. This is the ideal teaching case:
 # every pair differs, so the post-hoc test earns its place in the workflow
 # rather than feeling like an unnecessary extra step after an already-
-# significant ANOVA. Archaeologically, this confirms the staircase
+# significant Kruskal-Wallis. Archaeologically, this confirms the staircase
 # narrative - flake elongation increases at EVERY transition in the
 # sequence, not just from Lower to Upper while Middle sits ambiguously
 # between the two.

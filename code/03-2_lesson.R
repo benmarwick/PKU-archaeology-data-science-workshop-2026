@@ -34,7 +34,7 @@ ggpairs(lithics, # we have too many variables to easily interpret, we need
 #      (length, width, thickness, platform, weight). We cannot plot five
 #      dimensions at once. PCA finds the 2D view of this 5D data that
 #      preserves as much of the real variation as possible - it is a tool
-#      for SEEING multivariate structure, not a black box.
+#      for SEEING multivariate structure, not a black box. 
 
 pca_vars <- lithics |>
   dplyr::select(length_mm, 
@@ -134,10 +134,7 @@ perm_test  # report pseudo-F, R², df, and p-value
 #    shows visually: the three periods DO occupy different regions of
 #    multivariate morphospace. The R² of 0.357 is archaeologically
 #    meaningful - period is not merely a statistically significant but
-#    also a substantial driver of morphological variation. Compare this
-#    to the R² of 0.001 in the example you saw earlier (pseudo-F = 0.179,
-#    p = 0.834) - the contrast between a real archaeological effect and
-#    no effect is stark.
+#    also a substantial driver of morphological variation. 
 
 # Post-hoc pairwise PERMANOVA if omnibus significant
 pairwise.adonis(pca_scaled,
