@@ -18,11 +18,6 @@ library(broom)
 #      INDEPENDENT. A small p-value means knowing the period genuinely
 #      changes your best guess at platform type - i.e. platform preparation
 #      strategy is not random with respect to time period.
-# ARCHAEOLOGICAL PRECEDENT: this mirrors a REAL significant finding -
-#      Shimelmitz et al. (2014, PLOS ONE) report chi^2 = 24.14, df = 1,
-#      p < 0.0001 for platform type vs preparatory scarring in Yabrudian
-#      assemblages. The test below is the same KIND of result, not a
-#      simulation artefact invented for this workshop.
 chi_sq_test <- chisq.test(table(lithics$period, lithics$platform_prep))
 chi_sq_test # report chi-square statistic, df, and p-value here. 
 
