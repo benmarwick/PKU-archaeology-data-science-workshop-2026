@@ -25,8 +25,8 @@ If you are not able to install software on a device, click on this button to wri
 | Thursday afternoon | 01-3 | Quarto documents | Wickham et al. (2023), Ch. 28 |
 | Thursday evening | 02-1 | Data cleaning | Wickham et al. (2023), Ch. 3 |
 | Thursday evening | 02-2 | Visualisation with ggplot2 | Wickham et al. (2023), Ch. 9 |
-| Friday morning | 03-1 | Statistical inference (chi-square, ANOVA, Tukey) | Çetinkaya-Rundel & Hardin (2023), Chs. 18, 22; Ismay & Kim (2023), Ch. 9 |
-| Friday morning | 03-2 | Multivariate methods (PCA) | Vanderwarker & Marcoux (2018) |
+| Friday morning | 03-1 | Statistical inference (chi-square, KW, Dunn) | Çetinkaya-Rundel & Hardin (2023), Chs. 18, 22; Ismay & Kim (2023), Ch. 9 |
+| Friday morning | 03-2 | Multivariate methods (PCA, PerMANOVA) | Vanderwarker & Marcoux (2018) |
 | Friday morning | 03-3 | Capstone activity and quiz | Marwick et al. (2017) |
 
 ## Design Principles
@@ -89,12 +89,7 @@ source("code/extract_lesson_code.R")
 
 ## R Packages Required
 
-- `tidyverse` (data import, manipulation, visualisation)
-- `ggcorrplot` (chi-square residual plots)
-- `broom` (tidy model output)
-- `FactoMineR`, `factoextra` (PCA)
-- `GGally` (pairs plots)
-- `MASS` (multivariate normal simulation, instructor script only)
+see `install.R` for the list of packages that we use.
 
 ## References
 
