@@ -105,8 +105,12 @@ ggplot(lithics) + # more elaborate scatterplot
 
 library(ggcorrplot)
 library(broom)
+library(car)
+library(FSA) 
 
 chi_sq_test <- chisq.test(table(lithics$period, lithics$platform_prep))
+
+chi_sq_test$expected  # all cells should have expected ≥ 5
 
 chi_sq_test # report chi-square statistic, df, and p-value here. 
 
@@ -117,25 +121,40 @@ ggcorrplot(chi_sq_test$stdres, # Diagnosing WHICH cells drive the association
     name = "Std. residual"
   )
 
-fit <- aov(elongation ~ period, data = lithics)
+leveneTest(elongation ~ period, data = lithics, center = median)
 
-tidy(fit) # report F statistic, df, and p-value here. 
+aov(elongation ~ period, data = lithics) |>
+  residuals() |>
+  shapiro.test()
 
-fit |>
-  TukeyHSD() |>
-  tidy() |>
+kw_test <- kruskal.test(elongation ~ period, data = lithics)
+
+tidy(kw_test) # report F statistic, df, and p-value here. 
+
+dunn_result <- dunnTest(elongation ~ period, data = lithics, method = "bonferroni")
+
+dunn_tidy <- dunn_result$res |>
+  mutate(
+    contrast = Comparison,
+    estimate = Z,  # Use Z statistic as effect size
+    conf.low = Z - 1.96,
+    conf.high = Z + 1.96,
+    significant = P.adj < 0.05
+  )
+
+dunn_tidy |>
   ggplot() +
   aes(x = fct_reorder(contrast, estimate), 
       y = estimate) +
   geom_pointrange(aes(ymin = conf.low, 
                       ymax = conf.high, 
-                      colour = adj.p.value < 0.05)) +
+                      colour = significant)) +
   geom_hline(yintercept = 0, 
              linetype = "dashed") +
   scale_colour_brewer(palette = "Set1") +
   coord_flip() +
   labs(x = NULL, 
-       y = "Difference in mean elongation", 
+       y = "Z statistic (Dunn's test)", 
        colour = "p adj < 0.05") +
   theme_minimal()
 

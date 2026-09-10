@@ -69,7 +69,9 @@ ggcorrplot(chi_sq_test$stdres, # Diagnosing WHICH cells drive the association
 leveneTest(elongation ~ period, data = lithics, center = median)
 
 # Normality (Shapiro-Wilk on residuals), Residuals are normally distributed? if p-value > 0.05 (e.g., 0.212): Assumptions met - data appears normal
-shapiro.test(residuals(fit))
+aov(elongation ~ period, data = lithics) |>
+  residuals() |>
+  shapiro.test()
 
 # If the assumptions are not met, we could:
 # - non-normal residuals: log transform the response:
