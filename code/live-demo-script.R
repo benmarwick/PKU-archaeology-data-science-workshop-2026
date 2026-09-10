@@ -18,6 +18,7 @@ lithics_step2 <- lithics_step1 |>
   mutate(raw_material = str_squish(raw_material))
 
 lithics_step1 |> distinct(raw_material)   # whitespace variants still visible
+
 lithics_step2 |> distinct(raw_material)   # whitespace collapsed, but case/typo remain
 
 lithics_step3 <- lithics_step2 |>
@@ -144,17 +145,21 @@ fit |>
 library(tidyverse)
 library(FactoMineR)
 library(factoextra)
+library(vegan)
+library(GGally)
+library(pairwiseAdonis)
+library(WdStar)
 
 lithics <- read_csv("data/lithics_clean.csv") |>
   mutate(
     period       = factor(period, 
-                          levels = c("Lower", "Middle", "Upper")))
+                         levels = c("Lower", "Middle", "Upper")))
 
 library(GGally)
 
 ggpairs(lithics, # we have too many variables to easily interpret, we need 
-        columns = 3:11, # to reduce the dimensionality to help with interpretation. 
-        ggplot2::aes(colour = period))
+  columns = 3:11, # to reduce the dimensionality to help with interpretation. 
+  ggplot2::aes(colour = period))
 
 pca_vars <- lithics |>
   dplyr::select(length_mm, 
@@ -165,20 +170,20 @@ pca_vars <- lithics |>
                 period) |>
   drop_na()  # PCA cannot handle missing values 
 
-pca_fit <- PCA(pca_vars |> dplyr::select(-period),
-               scale.unit = TRUE, 
+pca_scaled <- pca_vars |>
+  dplyr::select(-period) |>
+  scale()  # returns matrix with center/scale attributes
+
+pca_fit <- PCA(pca_scaled, 
                graph = FALSE)
 
 fviz_eig(pca_fit, addlabels = TRUE) +
-  scale_fill_viridis_d(option = "D") +
   labs(x = "Principal component",
        y = "Percentage of variance explained")
 
-fviz_contrib(pca_fit, choice = "var", axes = 1) +
-  scale_fill_viridis_c(option = "D")
+fviz_contrib(pca_fit, choice = "var", axes = 1) 
 
-fviz_contrib(pca_fit, choice = "var", axes = 2) +
-  scale_fill_viridis_c(option = "D")
+fviz_contrib(pca_fit, choice = "var", axes = 2) 
 
 fviz_pca_biplot(
   pca_fit,
@@ -189,4 +194,26 @@ fviz_pca_biplot(
   scale_colour_brewer(palette = "Dark2") +
   scale_fill_brewer(palette = "Dark2") +
   labs(x = NULL, y = NULL, colour = "Period", fill = "Period", shape = "Period")
+
+set.seed(123)  # for reproducibility 
+
+perm_test <- adonis2(pca_scaled ~ pca_vars$period, 
+                     method = "euclidean",
+                     permutations = 999)
+
+perm_test  # report pseudo-F, R², df, and p-value
+
+pairwise.adonis(pca_scaled,
+                pca_vars$period,
+                sim.method = "euclidean")
+
+dist_matrix <- dist(pca_scaled, method = "euclidean")
+
+bd_test <- betadisper(dist_matrix, pca_vars$period)
+
+bd_test 
+
+permutest(bd_test, pairwise = TRUE, permutations = 999)
+
+WdS.test(dist_matrix, pca_vars$period)
 
