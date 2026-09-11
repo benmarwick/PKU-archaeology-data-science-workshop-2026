@@ -17,9 +17,9 @@ library(pairwiseAdonis)
 library(WdStar)
 
 lithics <- read_csv("data/lithics_clean.csv") |>
-  mutate(
-    period       = factor(period, 
-                         levels = c("Lower", "Middle", "Upper")))
+  mutate( # convert to factor is necessary for WdS.test
+    period = factor(period, 
+                    levels = c("Lower", "Middle", "Upper")))
 
 library(GGally)
 
@@ -166,7 +166,8 @@ permutest(bd_test, pairwise = TRUE, permutations = 999)
 # Provides an effect size (ω²) alongside the test statistic.
 # Running both WdS.test and betadisper provides a robustness check - if both are significant,
 # the dispersion difference is not an artifact of a single method.
-WdS.test(dist_matrix, pca_vars$period)
+WdS.test(dist_matrix, 
+         pca_vars$period) # grouping variable must be a factor
 
 # INTERPRETATION: WdS.test is significant (WdS = 85.674, p = 0.001, ω² = 0.37)
 # indicating significant LOCATION differences between periods (multivariate
@@ -180,7 +181,6 @@ WdS.test(dist_matrix, pca_vars$period)
 # (average distance 2.086) are more variable than Upper Palaeolithic
 # (0.933), consistent with the archaeological expectation that early
 # technologies show greater diversity as they develop standardized approaches.
-
 
 # INTERPRETATION: points (individual artefacts) separate primarily ALONG
 # PC2 by period - Lower Palaeolithic artefacts cluster toward one end,

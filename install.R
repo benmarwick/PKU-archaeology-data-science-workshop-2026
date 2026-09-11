@@ -4,7 +4,7 @@
 packages <- c(
   'rstudioapi',
   'ggcorrplot', 'broom', 'GGally', 'cowplot', 'ggbeeswarm',
-  'plotrix', 'RColorBrewer', 'viridis', 'car',
+  'plotrix', 'RColorBrewer', 'viridis', 'car', 'formatdown',
   'FactoMineR', 'factoextra', 'performance', 'FSA', 'infer',
   'here', 'readxl', 'rio', 'Rmisc', 'quarto', 'plyr', 'pbapply', 'remotes'
 )

@@ -63,3 +63,4 @@ message("Wrote live-demo-script.R with code from ", length(lesson_files), " less
 suppressWarnings(source("code/live-demo-script.R"))
 message("Ran live-demo-script.R to test it all works")
 
+

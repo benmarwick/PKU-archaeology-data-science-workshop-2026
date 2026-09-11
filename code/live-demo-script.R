@@ -107,12 +107,19 @@ library(ggcorrplot)
 library(broom)
 library(car)
 library(FSA) 
+library(formatdown)
 
 chi_sq_test <- chisq.test(table(lithics$period, lithics$platform_prep))
 
 chi_sq_test$expected  # all cells should have expected ≥ 5
 
 chi_sq_test # report chi-square statistic, df, and p-value here. 
+
+chi_sq_test_stat <- chi_sq_test$statistic
+
+chi_sq_test_pva <- chi_sq_test$p.value
+
+format_sci(chi_sq_test_pva, digits = 4)
 
 ggcorrplot(chi_sq_test$stdres, # Diagnosing WHICH cells drive the association
            method = "circle") +
@@ -128,8 +135,6 @@ aov(elongation ~ period, data = lithics) |>
   shapiro.test()
 
 kw_test <- kruskal.test(elongation ~ period, data = lithics)
-
-tidy(kw_test) # report F statistic, df, and p-value here. 
 
 dunn_result <- dunnTest(elongation ~ period, data = lithics, method = "bonferroni")
 
@@ -170,9 +175,9 @@ library(pairwiseAdonis)
 library(WdStar)
 
 lithics <- read_csv("data/lithics_clean.csv") |>
-  mutate(
-    period       = factor(period, 
-                         levels = c("Lower", "Middle", "Upper")))
+  mutate( # convert to factor is necessary for WdS.test
+    period = factor(period, 
+                    levels = c("Lower", "Middle", "Upper")))
 
 library(GGally)
 
@@ -234,5 +239,6 @@ bd_test
 
 permutest(bd_test, pairwise = TRUE, permutations = 999)
 
-WdS.test(dist_matrix, pca_vars$period)
+WdS.test(dist_matrix, 
+         pca_vars$period) # grouping variable must be a factor
 

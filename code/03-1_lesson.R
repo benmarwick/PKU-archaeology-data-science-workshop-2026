@@ -14,6 +14,7 @@ library(ggcorrplot)
 library(broom)
 library(car)
 library(FSA) 
+library(formatdown)
 
 # --- Chi-square test: platform_prep x period ---------------------------------
 # WHY: tests whether platform preparation strategy and period are
@@ -26,6 +27,13 @@ chi_sq_test <- chisq.test(table(lithics$period, lithics$platform_prep))
 chi_sq_test$expected  # all cells should have expected ≥ 5
 
 chi_sq_test # report chi-square statistic, df, and p-value here. 
+
+# prepare for inline R code
+chi_sq_test_stat <- chi_sq_test$statistic
+chi_sq_test_pva <- chi_sq_test$p.value
+
+# for inline R code that produces nicely formatted scientific notation. 
+format_sci(chi_sq_test_pva, digits = 4)
 
 # A p-value below 0.05 (expected: well below it, by design) means we reject
 # the null hypothesis that platform_prep is independent of period.
@@ -79,7 +87,6 @@ aov(elongation ~ period, data = lithics) |>
 
 # Kruskal-Wallis test (non-parametric alternative to ANOVA)
 kw_test <- kruskal.test(elongation ~ period, data = lithics)
-tidy(kw_test) # report F statistic, df, and p-value here. 
 
 # INTERPRETATION: a small p-value for the Kruskal-Wallis test means
 # elongation distributions differ across periods. Dunn's test identifies
