@@ -17,7 +17,7 @@ library(pairwiseAdonis)
 library(WdStar)
 
 lithics <- read_csv("data/lithics_clean.csv") |>
-  mutate( # convert to factor is necessary for WdS.test
+  mutate( # convert grouping variable to factor is necessary for WdS.test
     period = factor(period, 
                     levels = c("Lower", "Middle", "Upper")))
 
