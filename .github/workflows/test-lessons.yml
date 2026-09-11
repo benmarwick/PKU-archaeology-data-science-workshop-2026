@@ -1,10 +1,10 @@
-name: Test Lesson Code
+name: Validate Lesson Code
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, master ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, master  ]
 
 jobs:
   test-lessons:
