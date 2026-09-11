@@ -1,5 +1,7 @@
 ![](poster.jpg)
 
+[![Test Lesson Code](https://github.com/benmarwick/PKU-archaeology-data-science-workshop-2026/actions/workflows/test-lessons.yml/badge.svg)](https://github.com/benmarwick/PKU-archaeology-data-science-workshop-2026/actions/workflows/test-lessons.yml)
+
 # Peking University Archaeology Data Science Workshop 2026
 
 A short workshop teaching introductory R for archaeological data analysis, using a simulated Palaeolithic lithic dataset. Students learn data cleaning, visualisation, statistical inference, and multivariate methods while exploring authentic patterns in based on real-world Lower, Middle, and Upper Palaeolithic stone tool assemblages. 
