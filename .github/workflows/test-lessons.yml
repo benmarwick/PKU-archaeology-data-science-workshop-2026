@@ -1,4 +1,4 @@
-name: Validate Lesson Code
+name: Lesson Code Validatation
 
 on:
   push:
@@ -9,6 +9,8 @@ on:
 jobs:
   test-lessons:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     timeout-minutes: 30
 
     steps:
