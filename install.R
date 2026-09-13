@@ -2,7 +2,7 @@
 
 #  Install the rest of the workshop packages
 packages <- c(
-  'rstudioapi',
+  'rstudioapi', 'tidyverse',
   'ggcorrplot', 'broom', 'GGally', 'cowplot', 'ggbeeswarm',
   'plotrix', 'RColorBrewer', 'viridis', 'car', 'formatdown',
   'FactoMineR', 'factoextra', 'performance', 'FSA', 'infer',
